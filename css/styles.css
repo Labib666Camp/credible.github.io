@@ -1,0 +1,275 @@
+/* Variables & Basic Reset */
+:root {
+  --primary: #2C3E50;
+  --secondary: #34495E;
+  --accent: #E74C3C;
+  --light: #e2f3f8;
+  --dark: #111111;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: century-gothic, sans-serif;
+  /* background-color: var(--light); */
+  background: linear-gradient(45deg, #f1feff 0%, #ffe2fe 100%);
+  color: var(--dark);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  /* backdrop-filter: blur(10px); */
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.nav-link {
+  color: var(--primary) !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--accent) !important;
+}
+
+.btn-accent {
+  background-color: var(--accent);
+  border: none;
+  color: #fff;
+}
+
+.btn-accent:hover {
+  background-color: #c0392b;
+}
+
+/* Highlighted Text */
+.highlight {
+  color: var(--accent);
+  position: relative;
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 80px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ffffff 0%, #f8f9fa 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--primary);
+}
+
+/* Lottie Animation in Hero */
+lottie-player {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Creative Collage Layout for Digital Footprint Section */
+.creative-collage {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-item {
+  width: 45%;
+  max-width: 400px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* .collage-item img {
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+} */
+
+.collage-item-left {
+  transform: translate(-10%, -10%) rotate(-3deg);
+}
+
+.collage-item-right {
+  transform: translate(10%, 10%) rotate(2deg);
+}
+
+.collage-item:hover {
+  transform: scale(1.05);
+}
+
+/* Data Collection Section */
+.data-collection .data-flow-card {
+  /* background: #fff; */
+  padding: 2rem;
+  /* border-radius: 15px; */
+  /* box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05); */
+}
+
+.data-types {
+  margin-top: 1.5rem;
+}
+
+.data-item {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+/* User Journey Section */
+.step-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+}
+
+.step-card .step-image img {
+  max-height: 350px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Financial Institutions Section */
+.financial-flow {
+  /* border: 2px solid var(--primary); */
+  /* border-radius: 15px; */
+  padding: 1rem;
+  /* background: #fff; */
+}
+
+.metrics-list .metric-item {
+  background: #fff;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+/* Section Divider */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+/* Join Beta Section */
+.join-beta {
+  background-color: #fdfdfd;
+}
+
+/* Footer */
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  color: var(--primary);
+}
+
+.footer p a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer p a:hover {
+  color: var(--secondary);
+}
+
+/* AOS Custom Animations */
+[data-aos="custom-scale"] {
+  transform: scale(0.95);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+.aos-animate [data-aos="custom-scale"] {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Success Metrics Styling */
+.success-metrics {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.metric-card {
+  background: #fff;
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  min-width: 200px;
+}
+.metric-card i {
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+.metric-card span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.metric-card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Contact Styling */
+.footer-contact {
+  background: var(--accent);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer-contact .contact-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.footer-contact .founder {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.footer-contact .founder i {
+  font-size: 1.2rem;
+}
+.footer-contact a {
+  color: #fff;
+  text-decoration: underline;
+}
